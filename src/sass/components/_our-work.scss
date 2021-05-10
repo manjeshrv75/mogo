@@ -1,0 +1,84 @@
+.our-work {
+  position: relative;
+  perspective: 400px;
+  overflow: hidden;
+
+  // On hover
+  &:hover &__overlay {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  &__img-box {
+    height: 25rem;
+
+    @include respond(xl) {
+      height: 30rem;
+      overflow: hidden;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__overlay {
+    position: absolute;
+    width: 100%;
+    padding: 1rem;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($color-primary-dark, 0.85);
+
+    display: flex;
+    align-items: center;
+
+    @include respond(xl) {
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transform: scale(1.3);
+      transition: $transition-default;
+      opacity: 0;
+    }
+  }
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+    fill: $color-white;
+    @include respond(xl) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+
+    @include respond(xl) {
+      margin-left: 0;
+    }
+  }
+
+  &__title {
+    color: $color-white;
+    font-family: $font-title;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  &__text {
+    color: $color-white;
+    font-family: $font-body;
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,19 @@
+.header {
+  height: 100vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba($color-primary-dark, 0.85),
+      rgba($color-primary, 0.85)
+    ),
+    url(../img/bg/hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__content {
+    padding: 8rem 0;
+    animation: moveInUp 1s ease-out;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+  }
+}

@@ -1,0 +1,21 @@
+.row {
+  width: 100%;
+  max-width: 124rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include respond(md) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical-sm;
+
+    @include respond(lg) {
+      margin-bottom: $gutter-vertical;
+    }
+  }
+}

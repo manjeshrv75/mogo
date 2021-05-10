@@ -1,0 +1,187 @@
+.footer {
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 4rem;
+    justify-items: start;
+
+    @include respond(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond(xl) {
+      grid-template-columns: 1.5fr 1fr 1fr;
+    }
+  }
+
+  &__col-text {
+    grid-column: 1 / -1;
+
+    @include respond(md) {
+      grid-column: 1 / span 1;
+    }
+  }
+
+  &__logo {
+    color: $color-grey-light-2;
+    font-family: $font-title;
+    font-weight: 700;
+    font-size: 4.6rem;
+  }
+
+  &__text {
+    color: $color-grey-dark-2;
+    font-family: $font-body;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+  &__followers {
+    color: $color-grey-dark-1;
+    font-family: $font-title;
+  }
+
+  &__followers-count {
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+
+  &__followers-text {
+    font-weight: 400;
+    font-size: 1.4rem;
+  }
+
+  &__follow-us {
+    color: $color-grey-dark-2;
+    border-top: 1px solid $color-grey-light-2;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    grid-gap: 1rem;
+  }
+
+  &__follow-us-text {
+    font-family: $font-body;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-right: 4rem;
+  }
+
+  .footer__follow-us-link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      display: inline-block;
+      color: $color-grey-dark-2;
+      transition: $transition-default;
+    }
+
+    &:hover {
+      color: $color-primary-dark;
+    }
+
+    &:active {
+      color: darken($color-primary-dark, 20%);
+    }
+  }
+
+  &__follow-us-icon {
+    fill: currentColor;
+    width: 2rem;
+    height: 2rem;
+    transition: $transition-default;
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__input {
+    border: 1px solid $color-grey-light-2;
+    padding: 0.8rem 1rem;
+    font-family: $font-body;
+    font-weight: 400;
+    font-size: 1.5rem;
+    border-radius: none;
+    color: $color-grey-dark-2;
+    width: 60%;
+
+    @include respond(md) {
+      width: 25rem;
+    }
+
+    &::placeholder {
+      font-family: $font-body;
+      font-style: italic;
+      font-weight: 300;
+      color: $color-grey-light-2;
+    }
+
+    &:focus {
+      outline: 2px solid $color-primary-dark;
+    }
+  }
+
+  &__submit {
+    border: 1px solid $color-grey-light-2;
+    padding: 0.8rem 1rem;
+    font-family: $font-title;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-radius: none;
+    color: $color-white;
+    background-color: $color-grey-light-2;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    @include respond(sm) {
+      padding: 0.8rem 3rem;
+    }
+  }
+
+  &__col-title {
+    font-family: $font-title;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: $color-grey-dark-1;
+    text-transform: uppercase;
+  }
+
+  &__col-blog {
+    display: grid;
+    align-items: space-between;
+    align-self: stretch;
+    align-items: end;
+    grid-gap: 1.5rem;
+  }
+
+  &__col-instagram {
+    display: grid;
+    align-items: end;
+    grid-gap: 1.5rem;
+  }
+
+  &__col-insta-link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: $color-grey-dark-1;
+      display: inline-block;
+      font-family: $font-body;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.3rem;
+      transition: $transition-default;
+    }
+
+    &:hover {
+      color: $color-primary-dark;
+    }
+
+    &:active {
+      color: darken($color-primary-dark, 5%);
+    }
+  }
+}

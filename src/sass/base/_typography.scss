@@ -1,0 +1,81 @@
+.h1,
+.h2 {
+  font-family: $font-title;
+  font-weight: 700;
+  position: relative;
+
+  &--underline {
+    display: inline-block;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      height: 3px;
+      width: 6rem;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.h1 {
+  font-size: calc(4rem + 1.5vw);
+
+  @include respond(md) {
+    font-size: 10rem;
+    max-width: 70rem;
+    line-height: 0.95;
+  }
+
+  &--underline {
+    &::after {
+      bottom: -30%;
+      background-color: currentColor;
+    }
+  }
+}
+
+.h2 {
+  font-size: calc(2rem + 1.5vw);
+
+  @include respond(md) {
+    font-size: 3rem;
+  }
+
+  &--underline {
+    &::after {
+      background-color: $color-primary-dark;
+      bottom: -80%;
+    }
+  }
+}
+
+.tagline {
+  font-family: $font-display;
+
+  &--lg {
+    font-size: calc(2.5rem + 1.5vw);
+
+    @include respond(md) {
+      font-size: 6rem;
+    }
+  }
+
+  &--md {
+    font-size: calc(1.6rem + 1.5vw);
+
+    @include respond(md) {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+.para {
+  font-family: $font-body;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+  max-width: 96rem;
+  line-height: 1.5;
+}

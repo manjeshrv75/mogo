@@ -1,0 +1,58 @@
+.happy-client {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  grid-gap: 3rem;
+
+  &__img-box {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    border-radius: 50%;
+  }
+
+  &__content {
+  }
+
+  &__name {
+    color: $color-grey-dark-1;
+    font-family: $font-title;
+    font-weight: 400;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  &__role {
+    color: $color-grey-dark-1;
+    font-family: $font-body;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 6rem;
+      height: 2px;
+      border-radius: 1rem;
+      background-color: $color-primary-dark;
+      position: absolute;
+      left: 0;
+      bottom: -1.5rem;
+    }
+  }
+
+  &__text {
+    color: $color-grey-dark-2;
+    font-family: $font-body;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+}

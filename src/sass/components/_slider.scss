@@ -1,0 +1,88 @@
+.slider {
+  max-width: 110rem;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  &__item {
+    flex: 0 0 100%;
+    transition: transform 0.5s ease-out;
+
+    @include respond(md) {
+      transition: transform 1s ease-out;
+    }
+  }
+
+  .slider__btn {
+    /* Styling */
+    height: 4rem;
+    width: 4rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: $transition-default;
+    color: $color-grey-light-2;
+
+    /* Positioning */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    svg {
+      height: 4rem;
+      width: 4rem;
+      fill: currentColor;
+    }
+
+    &:hover {
+      color: $color-grey-dark-2;
+    }
+
+    &--left {
+      left: 0rem;
+
+      @include respond(md) {
+        left: 2rem;
+      }
+    }
+
+    &--right {
+      right: 0rem;
+
+      @include respond(md) {
+        right: 2rem;
+      }
+    }
+  }
+
+  &__dots {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1rem;
+  }
+
+  &__dot {
+    display: inline-block;
+    height: 0.8rem;
+    width: 0.8rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    &--active {
+      background-color: rgba(255, 255, 255, 1);
+    }
+  }
+}

@@ -1,0 +1,150 @@
+.nav {
+  color: $color-white;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    height: 7rem;
+  }
+
+  &__brand {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      display: inline-block;
+      font-family: $font-title;
+      font-weight: 700;
+      font-size: 3rem;
+      color: inherit;
+    }
+  }
+
+  &__menu {
+    list-style: none;
+    position: fixed;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    z-index: 30;
+    grid-gap: 2rem;
+    align-content: center;
+    justify-items: center;
+    transition: $transition-default;
+    background-color: $color-white;
+    color: $color-grey-dark-2;
+    // Hide on small screen
+    // display: none;
+
+    // Display on large screen
+    @include respond(lg) {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: max-content;
+      color: inherit;
+      grid-gap: 3rem;
+      margin-left: auto;
+      width: auto;
+      height: auto;
+      right: auto;
+      position: relative;
+      background-color: transparent;
+    }
+
+    &--open {
+      right: 0;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      display: inline-block;
+      font-family: $font-title;
+      font-weight: 400;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid transparent;
+      transition: $transition-default;
+      color: inherit;
+    }
+
+    &:hover {
+      border-bottom: 2px solid currentColor;
+    }
+
+    &--active {
+      &:link,
+      &:visited {
+        border-bottom: 2px solid $color-black;
+
+        @include respond(lg) {
+          border-bottom: 2px solid $color-black;
+        }
+      }
+    }
+  }
+
+  &__menu-icon {
+    //  Display on small screen
+    width: 4rem;
+    height: 4rem;
+    display: inline-block;
+    margin-left: auto;
+    color: inherit;
+
+    svg {
+      width: 4rem;
+      height: 4rem;
+      fill: currentColor;
+    }
+
+    // Hide on large screen
+    @include respond(lg) {
+      display: none;
+    }
+  }
+
+  &__close-icon {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    width: 4rem;
+    height: 4rem;
+    color: inherit;
+
+    @include respond(lg) {
+      display: none;
+    }
+
+    svg {
+      width: 4rem;
+      height: 4rem;
+      fill: currentColor;
+    }
+  }
+
+  &--sticky {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    color: $color-grey-dark-2;
+    border-bottom: 3px solid $color-grey-light-2;
+    background-color: rgba($color-white, 0.85);
+
+    .nav__link {
+      &:hover {
+        color: $color-primary-dark;
+      }
+
+      &--active {
+        color: $color-primary-dark;
+        border-bottom: 2px solid currentColor;
+      }
+    }
+  }
+}

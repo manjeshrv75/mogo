@@ -1,0 +1,81 @@
+.testimonial {
+  display: grid;
+  grid-gap: 2rem;
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 4rem;
+
+  @include respond(md) {
+    grid-template-columns: min-content 1fr;
+    grid-column-gap: 6rem;
+    padding: 0;
+  }
+
+  &__img-box {
+    width: 8rem;
+    height: 8rem;
+    border: 1px solid $color-grey-light-2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    padding: 0.3rem;
+    border-radius: 50%;
+    overflow: hidden;
+
+    @include respond(md) {
+      width: 15rem;
+      height: 15rem;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  &__text {
+    font-family: $font-body;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.8rem;
+    color: $color-grey-dark-2;
+
+    @include respond(md) {
+      font-size: 2.4rem;
+      grid-row: 1 / span 1;
+      grid-column: 2 / span 1;
+    }
+  }
+
+  &__author {
+    font-family: $font-display;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: $color-grey-dark-1;
+    margin-left: 7rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      background-color: $color-primary-dark;
+      height: 3px;
+      width: 6rem;
+      position: absolute;
+      left: -7rem;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 1rem;
+    }
+
+    @include respond(md) {
+      font-size: 2.4rem;
+      grid-row: 1 / span 1;
+      grid-column: 2 / span 1;
+      align-self: end;
+    }
+  }
+}

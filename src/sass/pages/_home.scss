@@ -1,0 +1,162 @@
+.section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  transition: all 1s ease-out;
+
+  @include respond(md) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  @include respond(xl) {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+}
+
+.section-sm {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  @include respond(md) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.section-animate {
+  transform: translateY(12rem);
+  opacity: 0;
+}
+
+.section-about {
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    grid-gap: 3rem;
+  }
+}
+
+.section-facts {
+}
+
+.section-services {
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 3rem;
+
+    @include respond(md) {
+      grid-gap: 6rem;
+    }
+  }
+}
+
+.section-unique-design {
+  background-image: linear-gradient(
+      to bottom,
+      rgba($color-white, 0.85),
+      rgba($color-white, 0.85)
+    ),
+    url(../img/bg/unique-design-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section-what {
+  &__content {
+    display: grid;
+    grid-gap: 3rem;
+    height: 69rem;
+
+    @include respond(md) {
+      grid-template-columns: repeat(2, 1fr);
+      height: 33rem;
+    }
+  }
+
+  &__img-box {
+    width: 100%;
+    height: 33rem;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+}
+
+.section-quote {
+}
+
+.section-team {
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    grid-gap: 3rem;
+  }
+}
+
+.section-our-work {
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 3rem;
+
+    @include respond(xl) {
+      grid-gap: 0;
+    }
+  }
+}
+
+.section-happy-client {
+  background-image: linear-gradient(
+      to right,
+      rgba($color-white, 0.85),
+      rgba($color-white, 0.85)
+    ),
+    url(../img/bg/happy-clients-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 4rem;
+
+    @include respond(md) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 8rem;
+    }
+  }
+}
+
+.section-stories {
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    grid-gap: 3rem;
+  }
+}
+
+.section-map {
+  background-image: linear-gradient(
+      to right,
+      rgba($color-white, 0.85),
+      rgba($color-white, 0.85)
+    ),
+    url(../img/bg/map-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+    fill: $color-primary-dark;
+  }
+}

@@ -1,0 +1,32 @@
+@import './abstract/variables';
+@import './abstract/mixins';
+
+@import './base/animations';
+@import './base/base';
+@import './base/scrollbar';
+@import './base/typography';
+@import './base/utils';
+
+@import './components/about';
+@import './components/accordion';
+@import './components/blog';
+@import './components/brand';
+@import './components/btn';
+@import './components/facts';
+@import './components/happy-client';
+@import './components/instagram';
+@import './components/latest-blog';
+@import './components/our-work';
+@import './components/quote';
+@import './components/services';
+@import './components/slider';
+@import './components/team';
+@import './components/testimonial';
+
+@import './layout/footer';
+@import './layout/header';
+@import './layout/nav';
+@import './layout/row';
+@import './layout/unique-design';
+
+@import './pages/home';

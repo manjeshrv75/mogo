@@ -1,0 +1,128 @@
+.team {
+  display: grid;
+  grid-gap: 0.5rem;
+  justify-items: center;
+
+  @include respond(md) {
+    grid-gap: 1rem;
+  }
+
+  &__img-box {
+    position: relative;
+    transition: $transition-default;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+
+  &__overlay {
+    position: absolute;
+    width: 100%;
+    height: 6rem;
+    left: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include respond(xl) {
+      height: 100%;
+      top: 0;
+      opacity: 0;
+      background-image: linear-gradient(
+        to bottom,
+        rgba($color-primary-dark, 0.85),
+        rgba($color-primary, 0.85)
+      );
+      transition: $transition-default;
+    }
+  }
+
+  &__icon-row {
+    display: flex;
+    width: 100%;
+    transition: $transition-default;
+
+    @include respond(xl) {
+      width: 24rem;
+      transform: scale(0);
+    }
+  }
+
+  &__icon-box {
+    &:link,
+    &:visited {
+      background-color: rgba($color-primary-dark, 0.85);
+      color: $color-primary-dark;
+
+      height: 6rem;
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      transition: $transition-default;
+      text-decoration: none;
+
+      @include respond(xl) {
+        flex: 0 0 6rem;
+        background-color: rgba($color-primary, 1);
+      }
+    }
+
+    &:hover,
+    &:active {
+      color: $color-white;
+      background-color: $color-primary-dark;
+    }
+  }
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+    fill: $color-white;
+
+    @include respond(xl) {
+      fill: currentColor;
+    }
+  }
+
+  &__name {
+    color: $color-grey-dark-1;
+    font-family: $font-title;
+    font-weight: 400;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+
+    @include respond(md) {
+      margin-top: 1rem;
+    }
+  }
+
+  &__role {
+    color: $color-grey-dark-2;
+    font-family: $font-body;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+
+  // Hover state
+  @include respond(xl) {
+    &__img-box:hover {
+      transform: translate(-1rem, -1rem);
+      box-shadow: 1rem 1rem 0 $color-grey-light-2;
+    }
+
+    &__img-box:hover .team__overlay {
+      opacity: 1;
+    }
+
+    &__img-box:hover .team__icon-row {
+      transform: scale(1);
+    }
+  }
+}

@@ -1,0 +1,129 @@
+// Margin
+.m-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-tn {
+  margin-bottom: 1rem;
+}
+
+.mb-sm {
+  margin-bottom: 2rem;
+}
+
+.mb-md {
+  margin-bottom: 4rem;
+}
+
+.mb-lg {
+  margin-bottom: 6rem;
+}
+
+.mb-hg {
+  margin-bottom: 12rem;
+}
+
+.mt-tn {
+  margin-top: 1rem;
+}
+
+.mt-sm {
+  margin-top: 2rem;
+}
+
+.mt-md {
+  margin-top: 4rem;
+}
+
+.mt-lg {
+  margin-top: 6rem;
+}
+
+.mt-hg {
+  margin-top: 8rem;
+}
+
+// Padding
+.pt-tn {
+  padding-top: 2rem;
+}
+
+.pt-sm {
+  padding-top: 2rem;
+}
+
+// Color
+.color-white {
+  color: $color-white;
+}
+
+.color-primary-dark {
+  color: $color-primary-dark;
+}
+
+.color-dark-1 {
+  color: $color-grey-dark-1;
+}
+
+.color-dark-2 {
+  color: $color-grey-dark-2;
+}
+
+.color-light-1 {
+  color: $color-grey-light-1;
+}
+
+.color-light-2 {
+  color: $color-grey-light-2;
+}
+
+.bg-color-white {
+  background-color: $color-white;
+}
+
+.bg-color-dark-1 {
+  background-color: $color-grey-dark-1;
+}
+
+.bg-color-dark-2 {
+  background-color: $color-grey-dark-2;
+}
+
+.bg-color-light-1 {
+  background-color: $color-grey-light-1;
+}
+
+.bg-color-light-2 {
+  background-color: $color-grey-light-2;
+}
+
+// Text
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+// Display
+.d-flex {
+  display: flex;
+}

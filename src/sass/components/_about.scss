@@ -1,0 +1,85 @@
+.about {
+  width: 100%;
+  height: 26rem;
+  position: relative;
+  text-align: center;
+  transition: $transition-default;
+
+  @include respond(xl) {
+    &:hover {
+      transform: translate(-1rem, -1rem);
+      box-shadow: 1rem 1rem 0 $color-grey-light-2;
+    }
+  }
+
+  &__img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__overlay {
+    color: $color-white;
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(
+      to bottom,
+      rgba($color-primary-dark, 0.85),
+      rgba($color-primary, 0.85)
+    );
+    width: 100%;
+    padding: 1rem;
+
+    @include respond(xl) {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: $transition-default;
+      opacity: 0;
+
+      &:hover {
+        opacity: 1;
+
+        .about__overlay-content {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
+  &__overlay-content {
+    @include respond(xl) {
+      opacity: 0;
+      transform: translateY(5rem);
+      transition: $transition-default;
+    }
+  }
+
+  &__icon-box {
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+  }
+
+  &__icon {
+    fill: currentColor;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__text {
+    font-family: $font-title;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @include respond(md) {
+      font-size: 1.8rem;
+    }
+  }
+}

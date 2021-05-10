@@ -1,0 +1,43 @@
+.facts {
+  text-align: center;
+  flex: 1;
+  border-left: 1px solid $color-white;
+  padding: 2rem 1rem;
+
+  @include respond(md) {
+    padding: 4rem 2rem;
+  }
+
+  @include respond(xl) {
+    padding: 6rem 3rem;
+  }
+  &:last-child {
+    border-right: 1px solid $color-white;
+  }
+
+  &__number,
+  &__text {
+    display: block;
+  }
+
+  &__number {
+    font-family: $font-title;
+    font-weight: 700;
+    font-size: calc(2rem + 1vw);
+
+    @include respond(xl) {
+      font-size: 5rem;
+    }
+  }
+
+  &__text {
+    font-family: $font-title;
+    font-weight: 400;
+    font-size: calc(0.5rem + 1vw);
+    text-transform: uppercase;
+
+    @include respond(md) {
+      font-size: 1.4rem;
+    }
+  }
+}

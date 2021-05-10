@@ -1,0 +1,65 @@
+.section-unique-design {
+  height: 47rem;
+  text-align: center;
+  position: relative;
+
+  @include respond(md) {
+    height: 84rem;
+  }
+
+  @include respond(lg) {
+    height: 88rem;
+  }
+
+  &__ipad-box {
+    width: 22rem;
+    height: 27rem;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include respond(md) {
+      width: 80%;
+      height: 60rem;
+      max-width: 50rem;
+    }
+  }
+
+  &__iphone-box {
+    position: absolute;
+    bottom: -3rem;
+    left: 65%;
+    width: 10rem;
+    max-width: 27rem;
+
+    @include respond(sm) {
+      left: 60%;
+    }
+
+    @include respond(md) {
+      width: 20rem;
+      bottom: -6.5rem;
+      left: 68%;
+    }
+
+    @include respond(lg) {
+      width: 22rem;
+      left: 60%;
+    }
+  }
+
+  &__ipad,
+  &__iphone {
+    display: inline-block;
+  }
+
+  &__ipad {
+    width: 100%;
+  }
+
+  &__iphone {
+    width: 100%;
+  }
+}

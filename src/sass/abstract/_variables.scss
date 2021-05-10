@@ -1,0 +1,28 @@
+// Colors
+$color-primary: #fce38a;
+$color-primary-dark: #f38181;
+$color-primary-light: #eaffd0;
+
+$color-grey-dark-1: #333333;
+$color-grey-dark-2: #999999;
+
+$color-grey-light-1: #f8f8f8;
+$color-grey-light-2: #95e1d3;
+
+$color-black: #000000;
+$color-white: #ffffff;
+
+// Fonts
+$font-title: 'Montserrat', sans-serif;
+$font-body: 'Roboto', sans-serif;
+$font-display: 'Kaushan Script', cursive;
+
+// Animations
+$transition-default: all 0.3s ease-out;
+
+// Layout
+$gutter-vertical: 6rem;
+$gutter-vertical-sm: 4rem;
+
+// Component specific
+$accordion-border: 0.5px solid $color-grey-light-2;
